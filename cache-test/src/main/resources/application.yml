@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: cache-test
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/employees?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+
+#redis config
+#  redis:
+#    host: localhost
+#    port: 6379
+#
+#  cache:
+#    redis:
+#      time-to-live: 6000000
+
+logging:
+  level:
+    org.springframework.cache: TRACE
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
