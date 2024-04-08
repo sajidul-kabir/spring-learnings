@@ -1,0 +1,18 @@
+package com.sajid.dto;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class OrderDto {
+    private int id;
+    private String customer_name;
+    private String product;
+    private Double transaction;
+    private String address;
+
+}
